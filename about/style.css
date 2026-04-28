@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    line-height: 1.6;
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.82),
+                        rgba(15, 23, 42, 0.82)),
+        url("../background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 60px;
+    background: rgba(17, 24, 39, 0.9);
+}
+
+.logo {
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.about-page {
+    padding: 100px 60px;
+}
+
+.about-card,
+.stat-box {
+    background: rgba(30, 41, 59, 0.85);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.stats-container {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* Hero / Main section */
+    .hero,
+    .section,
+    .about-page,
+    .services-page,
+    .projects-page {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero h1,
+    .hero h2,
+    .section h1,
+    .section h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    /* Cards */
+    .card-container,
+    .services-container,
+    .projects-container,
+    .stats-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card,
+    .service-card,
+    .project-card,
+    .about-card {
+        width: 100%;
+    }
+
+    /* Buttons */
+    button {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

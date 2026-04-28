@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    line-height: 1.6;
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.82),
+                        rgba(15, 23, 42, 0.82)),
+        url("../background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Navbar */
+/* Navbar - Desktop first */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(17, 24, 39, 0.92);
+    backdrop-filter: blur(6px);
+    width: 100%;
+}
+
+.logo {
+    color: #60a5fa;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+/* Services Page */
+.services-page {
+    padding: 80px 60px;
+    min-height: 100vh;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.services-header h1 {
+    font-size: 48px;
+    color: #60a5fa;
+    margin-bottom: 15px;
+}
+
+.services-header p {
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+/* Services Grid */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: rgba(30, 41, 59, 0.88);
+    padding: 30px;
+    border-radius: 14px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+}
+
+.service-card h2 {
+    color: #60a5fa;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #e2e8f0;
+}
+
+/* Responsive */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .services-page {
+        padding: 60px 20px;
+    }
+
+    .services-header h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .services-header p {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .services-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+}

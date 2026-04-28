@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    background: rgba(17, 24, 39, 0.95);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    color: #60a5fa;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: url("../background.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 650px;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #cbd5e1;
+}
+
+button {
+    padding: 14px 24px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Sections */
+.section {
+    padding: 100px 60px;
+}
+
+.section h2 {
+    margin-bottom: 30px;
+    color: #60a5fa;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+}
+/* About Page */
+.about-page {
+    padding: 100px 60px;
+    background: #111827;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-header h2 {
+    font-size: 42px;
+    color: #60a5fa;
+    margin-bottom: 15px;
+}
+
+.about-header p {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-text {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.about-text h3 {
+    color: #60a5fa;
+    margin-bottom: 15px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 200px;
+    background: #1e293b;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.stat-box h3 {
+    font-size: 36px;
+    color: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* Hero / Main section */
+    .hero,
+    .section,
+    .about-page,
+    .services-page,
+    .projects-page {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero h1,
+    .hero h2,
+    .section h1,
+    .section h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    /* Cards */
+    .card-container,
+    .services-container,
+    .projects-container,
+    .stats-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card,
+    .service-card,
+    .project-card,
+    .about-card {
+        width: 100%;
+    }
+
+    /* Buttons */
+    button {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
