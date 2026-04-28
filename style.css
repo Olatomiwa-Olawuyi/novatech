@@ -186,3 +186,46 @@ button {
         height: auto;
     }
 }
+/* ====================== CONTACT FORM ====================== */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px 18px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(30, 41, 59, 0.9);
+    color: white;
+    font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    background: rgba(30, 41, 59, 1);
+    border: 2px solid #60a5fa;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Make sure it stacks nicely on all screen sizes */
+@media (max-width: 768px) {
+    .contact-form {
+        margin: 30px auto 0;
+        padding: 0 10px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 15px;
+        padding: 14px 16px;
+    }
+}
